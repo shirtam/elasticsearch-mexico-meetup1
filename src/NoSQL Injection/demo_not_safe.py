@@ -20,12 +20,9 @@ def profile_view(username):
 
     res = es.search(index="users", body={
         "query": {
-            "constant_score": {
-                "filter": {
-                    "term": {
-                        "username": username.lower()
-                    }
-                }
+            "query_string": {
+                "fields": ["username"],
+                "query": username
             }
         }
     })
