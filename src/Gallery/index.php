@@ -1,7 +1,7 @@
 <?php
 
 /*
-this code as 3 vulnerabilities:
+this code has 3 vulnerabilities:
 * SSRF
 * File Reading (using php streams)
 * XSS
